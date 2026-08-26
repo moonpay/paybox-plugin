@@ -1,2 +1,7 @@
-# paybox-plugin
-Plugin for AI agents to move money with PayBox — swaps, transfers, x402 services, prediction markets, and virtual cards.
+# Your New Repo!
+
+This repository was created via Service Catalog.
+
+It includes baseline ownership files, including `CODEOWNERS`.
+
+Created-by: karifin@moonpay.com
