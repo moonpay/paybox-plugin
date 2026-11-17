@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "paybox",
+  "displayName": "PayBox",
+  "version": "0.1.0",
+  "description": "PayBox: a non-custodial wallet for agents. Swap and transfer tokens across chains, pay x402 services, take positions on prediction markets, and issue merchant-scoped virtual cards — with scoped, revocable access and passkey approval on sensitive operations.",
+  "author": {
+    "name": "MoonPay",
+    "url": "https://paybox.sh"
+  },
+  "homepage": "https://paybox.sh",
+  "repository": "https://github.com/moonpay/paybox-plugin",
+  "license": "MIT",
+  "keywords": [
+    "paybox",
+    "paybox wallet",
+    "paybox x402",
+    "paybox agent wallet"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://docs.paybox.sh",
+  "privacyPolicyUrl": "https://www.moonpay.com/en-gb/legal/privacy_policy_launchpad",
+  "termsOfServiceUrl": "https://www.moonpay.com/legal/terms_of_use_bvi_launchpad"
+}

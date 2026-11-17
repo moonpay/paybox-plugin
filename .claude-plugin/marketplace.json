@@ -1,0 +1,15 @@
+{
+  "name": "paybox",
+  "owner": {
+    "name": "MoonPay",
+    "url": "https://paybox.sh"
+  },
+  "description": "The PayBox plugin: a non-custodial wallet for agents.",
+  "plugins": [
+    {
+      "name": "paybox",
+      "source": "./",
+      "description": "Non-custodial wallet for agents: swaps, transfers, x402 payments, prediction markets and merchant-scoped virtual cards, with passkey approval on sensitive operations."
+    }
+  ]
+}
