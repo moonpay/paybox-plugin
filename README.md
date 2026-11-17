@@ -29,6 +29,7 @@ Currently packaged for **Grok**.
 | `paybox-get-started` | The grant model, approval modes, what to do when access blocks you |
 | `paybox-pay-and-swap` | Units, pre-spend checks, what a card authorization does not do |
 | `paybox-x402-services` | Which x402 tool to reach for, cost-before-spending, failing listings |
+| `paybox-mcp-signing` | Reopening the signing window when a request waits at `pending_signature` |
 
 ## How access works
 
