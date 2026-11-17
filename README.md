@@ -13,7 +13,16 @@ Add the plugin from your host's plugin marketplace, then sign in when prompted. 
 walks you through granting the connector access to specific credentials, each with its own approval
 mode.
 
-Currently packaged for **Grok**.
+Packaged for **Grok**, **Claude Code**, and **OpenAI Codex**. On Claude Code:
+
+```
+/plugin marketplace add moonpay/paybox-plugin
+/plugin install paybox@paybox
+```
+
+On Claude.ai, Claude Desktop, and any other host that supports remote MCP with OAuth, add
+`https://api.paybox.sh/mcp` as a connector. See [docs/hosts.md](docs/hosts.md) for the steps on each
+host.
 
 ## What it adds
 
@@ -44,7 +53,8 @@ A credential that exists but is not granted is invisible to the agent. That is t
 Every money operation completes in the PayBox signing window, which holds the key and signs there
 and nowhere else.
 
-Hosts differ in *when* they draw it, and PayBox tells each agent which applies to it.
+Hosts differ in *when* they draw it, and PayBox tells each agent which applies to it. See
+[docs/hosts.md](docs/hosts.md#when-the-signing-window-appears) for each host.
 
 **On Grok** the window appears only once the agent's reply is finished — nothing is on screen while
 it is still typing, and that is expected. When the reply ends the window appears, you sign, and the
