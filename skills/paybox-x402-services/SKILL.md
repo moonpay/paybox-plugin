@@ -21,6 +21,17 @@ x402 spends real money per call. **Tell the user what a service costs before pay
 before a loop: "I'll check five sources" can mean five payments. Quote `plan.x402.amount_usd`, which
 is already in dollars — never convert the atomic amount yourself.
 
+## The total, not just the price
+
+The listed price is what the service charges. Paying it on-chain can add a network fee on the chain
+you pay from. When you quote the cost, say whether the fee is included, and if you cannot see it,
+say the total is the price plus a network fee.
+
+Before a run of paid calls, work out the total — price × number of calls, plus fees — and check it
+against `get_portfolio` for the paying token **before the first call**. If the balance or the
+remaining spend limit does not cover the whole run, say so up front rather than stopping halfway
+through after some calls have been paid.
+
 ## A failing listing is usually the listing
 
 The catalogue is large and unvetted. Many entries are dead, on unsupported rails, or return
