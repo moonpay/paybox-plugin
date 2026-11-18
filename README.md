@@ -50,6 +50,19 @@ Hosts differ in *when* they draw it, and PayBox tells each agent which applies t
 it is still typing, and that is expected. When the reply ends the window appears, you sign, and the
 agent reports the outcome on its next turn.
 
+## PayBox CLI
+
+The `@paybox-sh/sdk` CLI signs with a local signing key. Use 2.6.0 or later (`paybox update`).
+Older versions sign only the token approval of an EVM swap and leave the swap itself at
+`pending_signature` (see #7).
+
+Pass `--wait` on `paybox swap` and other money commands. In current versions it waits for any
+approval, prints the request id straight away, and exits with code 75 if the request is still
+running when it stops. Follow that request with `paybox request <id> --wait`. Do not run the
+original command again, or you may spend twice.
+
+The CLI has no command yet to list or cancel requests.
+
 ## Security
 
 - PayBox never holds your key, and no flow asks the agent for a seed phrase or passphrase.
