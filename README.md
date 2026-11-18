@@ -52,11 +52,16 @@ agent reports the outcome on its next turn.
 
 ## PayBox CLI
 
-The `@paybox-sh/sdk` CLI signs with a local signing key. Pass `--wait` on `paybox swap` and other
-money commands. Without it, an EVM swap can send the token approval and then stay at
-`pending_signature` with nothing to sign it (see #7).
+The `@paybox-sh/sdk` CLI signs with a local signing key. Use 2.6.0 or later (`paybox update`).
+Older versions sign only the token approval of an EVM swap and leave the swap itself at
+`pending_signature` (see #7).
 
-The CLI has no command yet to list or cancel requests left at `pending_signature`.
+Pass `--wait` on `paybox swap` and other money commands. In current versions it waits for any
+approval, prints the request id straight away, and exits with code 75 if the request is still
+running when it stops. Follow that request with `paybox request <id> --wait`. Do not run the
+original command again, or you may spend twice.
+
+The CLI has no command yet to list or cancel requests.
 
 ## Security
 
